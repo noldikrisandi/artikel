@@ -23,6 +23,10 @@ app.get("/", (req, res) => {
   res.render("layout", { title: "Halaman Utama", content: "index" });
 });
 
+app.get("/1", function (req, res) {
+  res.sendFile(__dirname + "/index.html"); // Mengirimkan file index.html sebagai halaman utama
+});
+
 // start Route healhty.........................................................................
 app.get("/healhty/kesehatanAnak", (req, res) => {
   res.render("layout", {
