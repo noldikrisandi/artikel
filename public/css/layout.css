@@ -1,0 +1,240 @@
+/* start CSS Reset ...........................................................................*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Comfortaa", sans-serif;
+  font-family: "Coming Soon", cursive;
+  font-family: "Roboto", sans-serif;
+  color: #212529;
+}
+
+/* end CSS Reset .............................................................................*/
+
+/* start kelas sendiri .......................................................................*/
+.bold {
+  font-weight: bold;
+}
+
+.abu-abu {
+  color: rgb(145, 144, 144);
+}
+
+.hover-membesar {
+  transition: transform 0.3s ease;
+}
+.hover-membesar:hover {
+  transform: scale(1.03);
+}
+
+.biru {
+  color: #1783ef;
+}
+
+/* end kelas sendiri .........................................................................*/
+
+/* start tampilan halaman utama ..............................................................*/
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  color: #212529;
+  text-decoration: none;
+}
+
+.container .content {
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+.container a:hover {
+  text-decoration: none;
+  color: #1783ef;
+  transition: 400ms;
+}
+
+.container h2 {
+  margin: 20px 20px 20px 0;
+  font-weight: bold;
+}
+
+.container h4 {
+  font-size: 16pt;
+}
+
+.container h6 {
+  margin: 13px 0 20px 0;
+}
+
+.container p i {
+  margin: auto 5px;
+  font-size: 20px;
+}
+
+.container h5 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Tampilan Tab/HP  */
+@media screen and (max-width: 920px) {
+  .container {
+    width: 100wh;
+    margin: 0;
+  }
+
+  .container .content {
+    width: 100wh;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* end tampilan halaman utama ............................................................... */
+
+/* start top ................................................................................*/
+
+.container .top {
+  width: 100%;
+  display: flex;
+}
+
+.container .top .judul {
+  width: 780px;
+  margin-right: 20px;
+}
+
+.container .top .judul p {
+  text-align: justify;
+  font-size: 13.5pt;
+}
+
+.container .top .judul a {
+  text-decoration: none;
+  color: #212529;
+}
+
+@media screen and (max-width: 920px) {
+  .container .top {
+    display: block;
+  }
+
+  .container .top .judul {
+    width: 100wh;
+    margin-right: 0;
+  }
+
+  .container .top .judul p {
+    text-align: justify;
+    font-size: 13.5pt;
+  }
+
+  .container .top .judul a {
+    text-decoration: none;
+    color: #212529;
+  }
+}
+
+/* end top ..................................................................................*/
+
+/* start saran-artikel ...................................................................... */
+.container .saran-artikel {
+  width: 300px;
+  text-align: center;
+  text-decoration: solid;
+}
+
+.container .saran-artikel a {
+  text-decoration: none;
+  display: flex;
+  font-size: 11pt;
+  margin-bottom: 12px;
+}
+
+.container .saran-artikel a img {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.container .saran-artikel a p {
+  margin: auto 0 auto 10px;
+  text-align: left;
+  color: #1783ef;
+}
+/* end saran-artikel ........................................................................*/
+
+/* start container main .....................................................................*/
+
+.container .content main {
+  width: 780px;
+}
+
+.container main p {
+  font-size: 14pt;
+}
+
+.container main img {
+  width: 780px;
+  height: 350px;
+  object-fit: cover;
+  margin: 10px 0 20px 0;
+  border-radius: 7px;
+}
+/* end container main .......................................................................*/
+
+/* start artikel ............................................................................*/
+.container .artikel a,
+.artikel-a {
+  text-decoration: none;
+  display: flex;
+  font-size: 11pt;
+  width: 330px;
+  margin-top: 10px;
+  color: #1783ef;
+}
+
+.container .artikel a img,
+.artikel-img {
+  width: 40px;
+  height: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.container .artikel a p,
+.artikel-p {
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #1783ef;
+}
+
+.copy-writting {
+  text-align: right;
+  margin-right: 20px;
+  color: #212529;
+  font-size: 10pt;
+}
+
+/* Tampilan Tab/HP  */
+@media screen and (max-width: 920px) {
+  .container .artikel a,
+  .artikel-a {
+    /* font-size: 10pt; */
+    width: 100%;
+    margin-top: 10px;
+    color: #1783ef;
+  }
+
+  .container .artikel a img,
+  .artikel-img {
+    width: 50px;
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+/* end artikel ...............................................................................*/

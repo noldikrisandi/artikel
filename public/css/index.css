@@ -1,0 +1,115 @@
+/* start index ...............................................................................*/
+.content-top {
+  width: 32%;
+  margin: 10px auto;
+}
+.content-top a {
+  text-decoration: none;
+  color: #212529;
+}
+
+.content-top img {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.content-index {
+  width: 100%;
+  height: 400px;
+  margin: 20px auto;
+  background-image: url(../img/bambahano.jpg);
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.artikel-index {
+  display: flex;
+}
+
+.artikel-index a {
+  text-decoration: none;
+  color: cornflowerblue;
+  margin: auto;
+  display: flex;
+  width: 33%;
+}
+
+.artikel-index a img {
+  width: 63px;
+  height: 63px;
+  border-radius: 4px;
+}
+.artikel-index a p {
+  margin: auto 80px auto 20px;
+  font-size: 10pt;
+}
+
+.content-4 {
+  width: 20%;
+  margin: 0 auto;
+}
+
+.content-4 a {
+  text-decoration: none;
+  color: #212529;
+  font-size: 11pt;
+}
+
+.content-4 a h3 {
+  font-size: 13.5pt;
+  margin-top: 15px;
+}
+
+.content-4 img {
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+/* Tampilan Tab/HP  */
+@media screen and (max-width: 920px) {
+  .top {
+    width: 100%;
+    display: block;
+  }
+  .content-top {
+    width: 100%;
+    display: block;
+  }
+  .content-index {
+    height: 200px;
+  }
+  .artikel-index {
+    display: block;
+  }
+  .artikel-index a {
+    margin: 10px 0;
+    display: flex;
+    width: 100%;
+  }
+
+  .artikel-index a p {
+    margin: auto 40px auto 15px;
+    font-size: 9pt;
+  }
+
+  .content-4 {
+    width: 100%;
+  }
+
+  .content-4 img {
+    display: none;
+  }
+}
+
+/* end index .................................................................................*/
+
+/* start puisi ...............................................................................*/
+.container main .puisi {
+  width: 420px;
+}
+/* end puisi .................................................................................*/

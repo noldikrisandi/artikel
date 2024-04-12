@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Javacript -->
+    <script>
+      // start hak cipta.......................................................................
+      document.addEventListener("copy", function (e) {
+        e.preventDefault();
+        alert("Halaman ini dilidungi Hak Cipta!");
+      });
+
+      document.addEventListener("cut", function (e) {
+        e.preventDefault();
+        alert("Cut-paste dilarang di situs ini!");
+      });
+
+      document.addEventListener("paste", function (e) {
+        e.preventDefault();
+        alert("Paste dilarang di situs ini!");
+      });
+      // end hak cipta........................................................................
+
+      // star terakhir diubah.................................................................
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mendapatkan waktu terakhir modifikasi
+        var lastModified = new Date(document.lastModified);
+
+        // Konversi ke zona waktu Indonesia (WIB)
+        lastModified.setHours(lastModified.getHours());
+        // Tambahkan 7 jam untuk mendapatkan waktu WIB
+
+        // Format tanggal dan waktu
+        var options = {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          timeZone: "Asia/Jakarta",
+        };
+        var formattedDate = lastModified.toLocaleDateString("id-ID", options);
+
+        // Menampilkan waktu terakhir diubah di halaman
+        document.getElementById("lastModified").textContent = formattedDate;
+      });
+
+      // end terakhir diubah..................................................................
+    </script>
+
+    <!-- base href sebagai patokan -->
+    <base href="http://localhost:3000/" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="/css/nav-footer.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+
+    <!-- bootstrapicon -->
+    <link href="path/to/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- Tambahkan link ke file CSS Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Tambahkan link ke Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-....."
+      crossorigin="anonymous"
+    />
+
+    <!-- font goole -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Coming+Soon&family=Roboto:wght@100;300;400&display=swap");
+    </style>
+
+    <!-- end font google -->
+  </head>
+  <body>
+    <!-- Menu -->
+    <nav>
+      <div class="top"></div>
+      <div class="main-nav">
+        <a href="/" id="home-button" class="active"><h1>Trend Masa Kini</h1></a>
+      </div>
+      <div class="sub-nav">
+        <nav>
+          <ul>
+            <li>
+              Healhty
+              <ul>
+                <li><a href="healhty/kesehatanAnak">Kesehatan Anak</a></li>
+                <li><a href="healhty/kesehatanRemaja">Kesehatan Remaja</a></li>
+                <li><a href="healhty/kesehatanPemuda">Kesehatan Pemuda</a></li>
+                <li><a href="healhty/kesehatanDewasa">Kesehatan Dewasa</a></li>
+                <li><a href="healhty/kesehatanLansia">Kesehatan Lansia</a></li>
+              </ul>
+            </li>
+            <li>
+              Teknologi
+              <ul>
+                <li>Handphone</li>
+                <li>Laptop & PC</li>
+                <li>Penemuan Terbaru</li>
+                <li>Teknologi Terbaru Indonesia</li>
+              </ul>
+            </li>
+            <li>
+              Edukasi
+              <ul>
+                <li>Konsultasi PR</li>
+                <li>Masuk PTN</li>
+                <li>Lolos TNI/POLRI</li>
+                <li><a href="edukasi/puisi/puisi">Puisi</a></li>
+                <li><a href="#">Tips & Trik</a></li>
+                <li><a href="#">Self-improvement</a></li>
+                <li>
+                  Pelajar di Sekolah >
+                  <ul>
+                    <li>TK & SD</li>
+                    <li>SMP-Sederajat</li>
+                    <li>SMA-Sederajat</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Ayah-Bunda
+              <ul>
+                <li>
+                  <a
+                    href="Ayah-Bunda/tentang-bayi/Gizi-yang-dibutuhkan-bayi-pada-usia-0-bulan-sampai-12-bulan"
+                    >Tentang Bayi</a
+                  >
+                </li>
+                <li><a href="#">Masa Kehamilan</a></li>
+                <li><a href="#">Paska Melahirkan</a></li>
+                <li><a href="#">Dongeng</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </nav>
+
+    <!-- Konten dari index.ejs -->
+    <div class="container">
+      <div class="content"><%- include(content) %></div>
+    </div>
+
+    <!-- footer  -->
+    <div class="copy-writting" id="copy-writting">
+      <p>Create by Noldi Krisandi</p>
+    </div>
+    <footer class="site-footer">
+      <div class="container-footer">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <!-- <img src="logo.png" alt="Your Logo" /> -->
+            <h2>Trend Masa Kini</h2>
+          </div>
+          <div class="footer-social">
+            <h4>Ikuti Kami</h4>
+            <ul class="social-icons">
+              <li>
+                <a href="#" target="_blank"
+                  ><i class="fab fa-facebook abu-abu"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"
+                  ><i class="fab fa-twitter abu-abu"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"
+                  ><i class="fab fa-instagram abu-abu"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" target="_blank"
+                  ><i class="fab fa-linkedin abu-abu"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-middle">
+          <div class="footer-section">
+            <h4>Tentang Kami</h4>
+            <p>Dapatkan informasi terkini dan terbaru di sini.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Link Penting</h4>
+            <ul class="footer-links">
+              <li><a href="#">Berita</a></li>
+              <li><a href="#">Travelling</a></li>
+              <li><a href="#">Teknologi</a></li>
+              <li><a href="#">Edukasi</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Kontak Kami</h4>
+            <p>
+              Donggala, Indonesia<br />
+              Email: krisandinoldi@gmail.com<br />
+              Telepon: +62 823 4648 4778
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Trend Masa Kini. Hak Cipta Dilindungi.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
